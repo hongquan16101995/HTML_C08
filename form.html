@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--action: quy định địa chỉ mà các dữ liệu của form được gửi về-->
+<!--method: quy định cách thức mà dữ liệu được gửi về-->
+<!--+ get: dữ liệu gửi ít, không bảo mật, hiển thị trên đường dẫn url-->
+<!--+ post: dữ liệu lớn (gần như vô hạn), bảo mật hơn get, ẩn dữ liệu, k hiển thị-->
+<form action="">
+<!--    type: định dạng cho thẻ có kiểu như thế nào-->
+<!--    name: quy định tên của trường dữ liệu sẽ gửi về server-->
+<!--    value: giá trị mà trường dữ liệu có tên tương ứng gửi về-->
+    <label for="username">Username</label>
+    <input type="text" name="username" value="123456" id="username"><br>
+<!--    hidden: ẩn thẻ html tương ứng-->
+<!--    readonly: chỉ đọc và không được thay đổi-->
+<!--    disable: hủy tính năng của thẻ-->
+<!--    placeholder: đưa gợi ý cho người dùng nhập vào thẻ đó-->
+    <input type="number" placeholder="chỉ được nhập số thôi"><br>
+    <input type="password" name="password"><br>
+    <input type="checkbox" name="sothich" value="male" id="checkbox1">
+    <label for="checkbox1">Nam</label>
+    <input type="checkbox" name="sothich" value="female">Nữ <br>
+    <input type="radio" name="gender" value="man">Nam
+    <input type="radio" name="gender" value="woman">Nữ<br>
+    <input type="date"><br>
+    <input type="datetime-local"><br>
+    <input type="email"><br>
+    <input type="tel"><br>
+    <input type="range"><br>
+<!--    tạo 1 lựa chọn dạng dropdown-->
+    <select name="class">
+        <option value="1">Lớp 1</option>
+        <option value="2">Lớp 2</option>
+        <option value="3">Lớp 3</option>
+    </select><br>
+
+<!--    tạo 1 vùng nhập liệu lớn với textarea-->
+    <textarea name="diachi" cols="50" rows="20"></textarea>
+
+    <input type="submit" value="Tìm kiếm">
+    <input type="reset" value="Đặt lại">
+    <input type="button" value="Nút bấm">
+</form>
+</body>
+</html>
