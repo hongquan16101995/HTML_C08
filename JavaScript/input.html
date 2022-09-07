@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text">
+<button onclick="getValue()">Click</button>
+<p id="result">Demo</p>
+</body>
+<script>
+
+    //inout-c2: sử dụng input, lấy dữ liệu thông qua id
+    function getValue() {
+        let b = document.getElementById("text").value
+        console.log(b)
+        alert(b)
+        confirm(b)
+        // document.write(b)
+        document.getElementById("result").innerHTML = "<h1>" + b + "</h1>"
+    }
+
+    // //input-c1: sử dụng hộp thoại prompt()
+    // // let a = prompt("Nhập gì đó:")
+    // //output-c1: sử dụng hàm console.log(), dữ liệu hiển thị ở phần console của trang web
+    // console.log(a)
+    // //output-c2: sử dụng hàm alert(), dữ liệu hiển thị dạng hộp thoại (dialog box)
+    // alert(a)
+    // //output-c2: sử dụng hàm confirm(), dữ liệu hiển thị dạng hộp thoại (dialog box), có xác nhận
+    // confirm(a)
+    // //output-c3: sử dụng document.write(), dữ liệu hiển thị ở màn hình,
+    // // nhưng sẽ xóa tất cả những thành phần đang tồn tại sẵn ở màn hình
+    // document.write(a)
+    // // output-c4: sử dụng document.getElementById(), dữ liệu hiển thị ở màn hình,
+    // // nằm trong phần có id tương ứng
+    // // innerText: hiển thị dạng text thông thường
+    // // innerHTML: có thể hiểu được thẻ HTML
+    // document.getElementById("result").innerText = "<h1>" + a + "</h1>"
+    // document.getElementById("result").innerHTML = "<h1>" + a + "</h1>"
+
+</script>
+</html>

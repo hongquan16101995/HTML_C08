@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body">
+<button style="width: 100px; height: 100px"
+        onmouseover="mouseOver()"
+        onmouseout="mouseOut()"
+        onclick="clickB()">Click</button>
+</body>
+<script>
+    function mouseOver() {
+        document.getElementById("body").style.backgroundColor = "red"
+    }
+
+    function mouseOut() {
+        document.getElementById("body").style.backgroundColor = "white"
+    }
+
+    function clickB() {
+        alert("HelleWorld")
+    }
+</script>
+</html>

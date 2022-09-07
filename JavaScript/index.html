@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>HelloWorld</h1>
+<!--c1: triển khai Js trực tiếp trong HTML bằng inline-->
+<button onclick="alert('HelloWorld')">ClickMe</button>
+<button onclick="display()">ClickMe2</button>
+<button onclick="display2()">ClickMe3</button>
+</body>
+<!--c2: triển khai Js trong HTML bằng cặp thẻ script-->
+<script>
+    function display() {
+        alert("HelloWorld")
+    }
+</script>
+<!--c3: triển khai Js trong HTML bằng file .js-->
+<script src="index.js"></script>
+</html>
