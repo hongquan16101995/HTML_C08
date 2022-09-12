@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="image" src="avatar.jpg" alt=""
+     style="position: relative; left: 10px; top: 10px;
+     border: 1px solid; width: 150px; height: 150px">
+<br><br>
+<button onclick="run()">ClickMe!</button>
+</body>
+<script>
+    function run() {
+        let imgObj = document.getElementById("image")
+        let left = parseInt(imgObj.style.left)
+        document.getElementById("image").style.left = left + 10 + "px"
+    }
+</script>
+</html>
