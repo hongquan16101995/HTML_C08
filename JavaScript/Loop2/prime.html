@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //hiển thị 20 số nguyên tố đâu tiên
+    let number = 0
+    let count = 1
+    let data = ""
+    while (count <= 20) {
+        if (number < 2) {
+            // console.log(number + " không phải là số nguyên tố")
+        } else {
+            let flag = false
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    // console.log(number + " không phải là số nguyên tố")
+                    flag = true
+                    break
+                }
+            }
+            if (!flag) {
+                // console.log(number + " là số nguyên tố")
+                data += number + ","
+                count++
+            }
+        }
+        number++
+    }
+    console.log(data)
+</script>
+</html>
