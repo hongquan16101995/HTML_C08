@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = 10
+    //khởi tạo mảng
+    let arr = [1, 2, 3, 4, 5]
+    console.log(a)
+    console.log(typeof a)
+    console.log(arr)
+    console.log(typeof arr)
+
+    //khởi tạo mảng với từ khóa new
+    let array = new Array(1, 2, 3)
+    let array1 = new Array(3)
+    console.log(array)
+    console.log(typeof array)
+    console.log(array1)
+    console.log(typeof array1)
+
+    //truy xuất phần từ trong mảng, dựa vào chỉ số (index) của phần tử
+    console.log(arr[3])
+
+    //duyệt mảng: đi lần lượt qua các phần tử của mảng
+    for (let i = 0; i < arr.length; i++) {
+
+    }
+
+    //thay thế giá trị của mảng
+    let array3 = [1, 2, 3]
+    array3 = [4, 5, 6]
+    //thay thế giá trị phần tử của mảng
+    array3[1] = 100
+    console.log(array3)
+
+    //trong js, độ dài mảng là không cố định
+    array3[50] = 1000
+    array3[20] = 1111
+    console.log(array3)
+    console.log(array3.length)
+
+    //mảng trong Js chứa được tất cả các kiểu dự liệu của Js
+    let array4 = [1, "abc", null, undefined, true, {a: 1}]
+    console.log(array4)
+    console.log(array4.length)
+</script>
+</html>

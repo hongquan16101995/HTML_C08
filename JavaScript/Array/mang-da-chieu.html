@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let array = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+    console.log(array)
+    console.log(array.length)
+    console.log(array[0].length)
+    console.log(array[3][1])
+    console.log("-----------")
+
+    //duyệt mảng
+    //for ngoài: duyệt qua các hàng của mảng
+    for (let i = 0; i < array.length; i++) {
+        //duyệt qua các phần tử của mảng con; duyệt qua các cột
+        for (let j = 0; j < array[i].length; j++) {
+            console.log(array[i][j])
+        }
+        console.log("-----------")
+    }
+
+    //thay thế 1 phần tử nhỏ
+    array[1][1] = 555
+    console.log(array)
+    array[0] = [1111]
+    console.log(array)
+    console.log(array[0][0])
+</script>
+</html>
