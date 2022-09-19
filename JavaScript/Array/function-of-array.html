@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  //push-pop: thêm-xóa 1 phần tử ở cuối mảng
+  let arr = [1,2,3]
+  arr.pop()
+  console.log(arr)
+  arr.push(1000)
+  console.log(arr)
+
+  console.log("-----------")
+  //unshift-shift: thêm-xóa 1 phần tử ở đầu mảng
+  let arr1 = [1,2,3]
+  arr1.shift()
+  console.log(arr1)
+  arr1.unshift(1000)
+  console.log(arr1)
+
+  console.log("-----------")
+  //concat: nối 2 mảng thành 1 mảng bất kỳ
+  let arr2 = [1,2,3]
+  let arr3 = [4,5,6]
+  let arr4 = arr2.concat(arr3)
+  console.log(arr4)
+  console.log(arr2)
+  console.log(arr3)
+
+  console.log("-----------")
+  //indexOf-lastIndexOf: trả về vị trí đầu tiên-cuối cùng trong mảng của 1 giá trị bất kỳ
+  //nếu giá trị không tồn tại trong mảng, trả về -1
+  let arr5 = [1,2,3,4,5,5,4,3,2,1]
+  console.log(arr5.indexOf(2))
+  console.log(arr5.lastIndexOf(2))
+
+  console.log("-----------")
+  //reverse: đảo ngược các giá trị trong mảng, thay đổi mảng gốc
+  let arr6 = [1,2,3,4]
+  console.log(arr6)
+  arr6.reverse()
+  console.log(arr6)
+
+  console.log("-----------")
+  //toString: trả về giá trị mảng ở dạng chuỗi
+  //join: nối các phần tử thành 1 chuỗi với quy tắc nhất định
+  let arr7 = [1,2,3,4]
+  console.log(arr7.toString())
+  console.log(arr7.join())
+  console.log(arr7.join(""))
+  console.log(arr7.join(" "))
+  console.log(arr7.join("-"))
+
+  console.log("-----------")
+  //slice: không ảnh hưởng đến mảng gốc sau khi cắt
+  //tham số 1: vị trí bắt đầu cắt
+  //tham số 2: vị trí kết thúc cắt - 1
+  //splice: ảnh hưởng đến mảng gốc sau khi cắt
+  //tham số 1: vị trí bắt đầu cắt
+  //tham số 2: số lượng phần tử sẽ cắt
+  let arr8 = [1,2,3,4,5,6,7,8]
+  console.log(arr8)
+  console.log(arr8.slice(2,5))
+  console.log(arr8)
+  console.log(arr8.splice(2,5))
+  console.log(arr8)
+  console.log("-----------")
+  //splice: tham số 3: giá trị thêm vào tại điểm bắt đầu cắt
+  let arr9 = [1,2,3,4,5,6,7,8]
+  console.log(arr9.splice(2,4,100))
+  console.log(arr9)
+  console.log("-----------")
+  let arr10 = [1,2,3,4,5,6,7,8]
+  // arr10.splice(4,0,100,99)
+  console.log(arr10.slice(2,-4))
+  console.log(arr10.slice(1,4))
+  console.log(arr10)
+
+  console.log("-----------")
+  //sort: sắp xếp các phần tử của mảng theo 1 chiều nhất định
+  let arr11 = [1,5,9,8,6,3,7]
+  //phần function (a,b) {}: gọi là function anonymous - hàm ẩn danh
+  //thường là tham số cho 1 hàm khác
+  // arr11.sort(function (a,b) {
+  //     return b-a
+  // })
+  // console.log(arr11)
+
+  //phần (a,b) => {}: gọi là function arrow - hàm mũi tên
+  //thường là tham số cho 1 hàm khác
+  arr11.sort( (a,b) => {
+      return a-b
+  })
+  console.log(arr11)
+
+  //thuật toán sắp xếp
+  // for (let i = 0; i < arr11.length; i++) {
+  //     for (let j = i; j < arr11.length; j++) {
+  //         if (arr11[j] < arr11[i]) {
+  //             let temp = arr11[i]
+  //             arr11[i] = arr11[j]
+  //             arr11[j] = temp
+  //         }
+  //     }
+  // }
+  // console.log(arr11)
+
+  //map
+  let a = [1,2,3]
+  console.log(a.map(function (value) {
+      return value * 3
+  }))
+  console.log(a)
+
+  //split: cắt chuỗi thành 1 mảng ký tự theo 1 quy tắc nhất định
+  //toUpperCase: chuyển chữ thường thành hoa
+  //toLowerCase: chuyển chữ hoa thành thường\
+  let string = "codegym"
+  console.log(string.toUpperCase())
+  let string1 = "HANOI"
+  console.log(string1.toLowerCase())
+  let string2 = "day la chu oi"
+  console.log(string2.split(""))
+  console.log(string2.split(" "))
+</script>
+</html>
