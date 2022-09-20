@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //cú pháp của hamf cơ bản
+    //từ khóa function: quy định đây là 1 hàm
+    //sum: tên của hàm, dùng để call hàm
+    //(): chứa các tham số, nếu có
+    //return: từ khóa dùng để trả về giá trị của hàm, nếu có
+    function sum() {
+        let a = 5
+        let b = 10
+        let c = a + b
+        console.log(c)
+    }
+
+    //sử dụng/gọi hàm + (): gọi thông qua tên, truyền vào tham số nếu có
+    sum()
+
+    //4 kiểu hàm cơ bản chính
+    //1. không tham số, không giá trị trả về
+    console.log("-----------")
+    function sum1() {
+        let a = 5
+        let b = 10
+        let c = a + b
+        console.log(c)
+    }
+    sum1()
+
+    //2. có tham số, không giá trị trả về
+    console.log("-----------")
+    function sum2(num1, num2) {
+        let c = num1 + num2
+        console.log(c)
+    }
+    sum2(5,10)
+
+    //3. không tham số, có giá trị trả về
+    console.log("-----------")
+    function sum3() {
+        let a = 5
+        let b = 10
+        let c = a + b
+        return c
+    }
+    //hứng giá trị của hàm sum3() bằng biến tong
+    let tong = sum3()
+    console.log(tong)
+
+    //4. có tham số, có giá trị trả về
+    console.log("-----------")
+    function sum4 (num1, num2) {
+        let c = num1 + num2
+        return c
+    }
+    let tong1 = sum4(5,20)
+    console.log(tong1)
+
+    console.log("*************")
+    let number1 = +prompt("Nhập số thứ 1")
+    let number2 = +prompt("Nhập số thứ 2")
+    console.log(sum4(number1, number2))
+</script>
+</html>

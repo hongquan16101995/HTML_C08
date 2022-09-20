@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //tham trị
+    let a = 5
+    let b = 10
+
+    function swap(num1, num2) {
+        let temp = num1
+        num1 = num2
+        num2 = temp
+        console.log("giá trị num1 = " + num1)
+        console.log("giá trị num2 = " + num2)
+    }
+
+    swap(a, b)
+    console.log("giá trị a = " + a)
+    console.log("giá trị b = " + b)
+
+    //tham chiếu
+    console.log("---------------")
+    let arr = [5,10]
+
+    function swap1(array) {
+        let temp = array[0]
+        array[0] = array[1]
+        array[1] = temp
+        console.log("giá trị num1 = " + array[0])
+        console.log("giá trị num2 = " + array[1])
+    }
+    swap1(arr)
+    console.log("giá trị a = " + arr[0])
+    console.log("giá trị b = " + arr[1])
+
+
+
+    function demo(num) {
+        console.log(num)
+    }
+    let abc = 1234
+    demo(abc)
+</script>
+</html>
