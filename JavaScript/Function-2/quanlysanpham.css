@@ -1,0 +1,12 @@
+button {
+    background-color: #19d019;
+    border: none;
+    color: white;
+    width: 60px;
+    height: 28px;
+    border-radius: 4px;
+}
+
+table {
+    width: 480px;
+}
