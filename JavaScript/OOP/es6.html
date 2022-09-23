@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //khai báo lớp với es6
+    class Animal {
+        //khai báo thuộc tính của lớp
+        name
+        age
+        gender
+
+        constructor(name, age, gender) {
+            this.name = name
+            this.age = age
+            this.gender = gender
+        }
+
+        getName() {
+            return this.name
+        }
+
+        setName(name) {
+            this.name = name
+        }
+
+        eat() {
+            console.log("Có thể ăn")
+        }
+
+        isMale() {
+            // if (this.gender === "male") {
+            //     return true
+            // } else {
+            //     return false
+            // }
+            return this.gender === "male"
+        }
+    }
+
+    //khởi tạo đối tượng
+    let animal1 = new Animal("Cat", 3, "female")
+    console.log(animal1.gender)
+    animal1.eat()
+    console.log(animal1.isMale())
+</script>
+</html>

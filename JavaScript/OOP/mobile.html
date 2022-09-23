@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 600px;
+        }
+
+        table, td {
+            border: 1px solid;
+        }
+
+        label {
+            font-size: 20px;
+            color: red;
+        }
+
+        p {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <h2 id="nokia"></h2>
+            <p id="nokia_bat"></p>
+            <input type="text" id="nokia_mess">
+            <br>
+            <label>Draft message: </label><p id="nokia_draft"></p>
+            <label>Receive message: </label><p id="nokia_receive"></p>
+            <label>Sent message: </label><p id="nokia_sent"></p>
+            <button onclick="sentNokiaToIphone()">SentMess</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2 id="iphone"></h2>
+            <p id="iphone_bat"></p>
+            <input type="text" id="iphone_mess">
+            <br>
+            <label>Draft message: </label><p id="iphone_draft"></p>
+            <label>Receive message: </label><p id="iphone_receive"></p>
+            <label>Sent message: </label><p id="iphone_sent"></p>
+            <button onclick="sentIphoneToNokia()">SentMess</button>
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+    class Mobile {
+        name
+        battery
+        draftMess
+        receiveMess
+        sendMess
+
+        constructor(name, battery) {
+            this.name = name
+            this.battery = battery
+            this.draftMess = []
+            this.receiveMess = []
+            this.sendMess = []
+        }
+
+        writeMess(mess) {
+            this.draftMess.push(mess)
+        }
+
+        sentMess(mess, phone) {
+            this.sendMess.push(mess)
+            phone.receiveMess.push(mess)
+            phone.test()
+        }
+
+        test() {
+            console.log(this.name + "C0822H1")
+        }
+    }
+
+    //tạo 2 cái điện thoại
+    let nokia = new Mobile("Nokia", 100)
+    let iphone = new Mobile("Iphone", 80)
+
+    function init() {
+        document.getElementById("nokia").innerHTML = nokia.name
+        document.getElementById("nokia_bat").innerHTML = nokia.battery
+        document.getElementById("iphone").innerHTML = iphone.name
+        document.getElementById("iphone_bat").innerHTML = iphone.battery
+    }
+
+    function draft1(value) {
+        nokia.writeMess(value)
+        document.getElementById("nokia_draft").innerHTML = nokia.draftMess
+        // document.getElementById("nokia_mess").value = ""
+    }
+
+    function draft2(value) {
+        iphone.writeMess(value)
+        document.getElementById("iphone_draft").innerHTML = iphone.draftMess
+        // document.getElementById("iphone_mess").value = ""
+    }
+
+    function sentNokiaToIphone() {
+        let mess = document.getElementById("nokia_mess").value
+        nokia.sentMess(mess, iphone)
+        display()
+    }
+
+    function sentIphoneToNokia() {
+        let mess = document.getElementById("iphone_mess").value
+        iphone.sentMess(mess, nokia)
+        display()
+    }
+
+    function display() {
+        document.getElementById("nokia_receive").innerHTML = nokia.receiveMess
+        document.getElementById("nokia_sent").innerHTML = nokia.sendMess
+        document.getElementById("nokia_mess").value = ""
+        document.getElementById("iphone_receive").innerHTML = iphone.receiveMess
+        document.getElementById("iphone_sent").innerHTML = iphone.sendMess
+        document.getElementById("iphone_mess").value = ""
+    }
+
+    window.onload = init
+</script>
+</html>

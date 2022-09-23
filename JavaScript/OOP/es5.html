@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //khai báo lớp với es5
+    function Animal(name, age, gender) {
+        this.name = name
+        this.age = age
+        this.gender = gender
+
+        this.eat = function () {
+            console.log("Có thể ăn")
+        }
+    }
+
+    //khởi tạo đối tượng
+    let animal1 = new Animal("Dog", 2, "male")
+    console.log(animal1.gender)
+    animal1.eat()
+</script>
+</html>
